@@ -1,0 +1,711 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manasa Rajasekharan | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fffaf7;
+    color: #302b40;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #fffaf7;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #8856c9;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #413950;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #a46be5;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 85vh;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(120deg, #f4eaff, #ffe9e5, #fff3d8);
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hello {
+    color: #9b65d5;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.15;
+    margin: 15px 0;
+    color: #302b40;
+}
+
+.hero h1 span {
+    color: #a16bd7;
+}
+
+.hero h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #72548d;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #665e70;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #9660cf;
+    color: white;
+}
+
+.secondary {
+    border: 2px solid #9660cf;
+    color: #8553b9;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+.hero-art {
+    width: 290px;
+    height: 290px;
+    flex-shrink: 0;
+    border-radius: 45% 55% 60% 40%;
+    background: linear-gradient(135deg, #c5a0ef, #f7b9bb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    box-shadow: 15px 15px 0 #ead5fa;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 85px 10%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    color: #49345e;
+}
+
+.section-heading p {
+    font-size: 13px;
+    color: #92869c;
+    margin-top: 8px;
+}
+
+.about {
+    background: white;
+}
+
+.about-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 20px;
+    background: #f8f0ff;
+    line-height: 2;
+    color: #665d70;
+    font-size: 14px;
+    border-left: 5px solid #a879dc;
+}
+
+/* EDUCATION */
+
+.education {
+    background: #fff8ef;
+}
+
+.info-card {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(70,40,80,0.06);
+}
+
+.info-card h3 {
+    color: #8754bc;
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    font-size: 14px;
+    line-height: 2;
+    color: #71677b;
+}
+
+/* SKILLS */
+
+.skills {
+    background: white;
+}
+
+.skill-group {
+    margin-bottom: 30px;
+}
+
+.skill-group h3 {
+    margin-bottom: 18px;
+    color: #8054ad;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tag {
+    padding: 11px 19px;
+    background: #f0e4ff;
+    color: #7651a0;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.tag:nth-child(3n+2) {
+    background: #ffe8e6;
+    color: #ba6e76;
+}
+
+.tag:nth-child(3n) {
+    background: #e2f4e9;
+    color: #528a69;
+}
+
+/* EXPERIENCE */
+
+.experience {
+    background: #f9f3ff;
+}
+
+.experience-card {
+    background: white;
+    padding: 30px;
+    margin: 22px auto;
+    max-width: 850px;
+    border-radius: 18px;
+    border-left: 5px solid #a16bd7;
+    box-shadow: 0 8px 25px rgba(80,50,100,0.05);
+}
+
+.experience-card h3 {
+    color: #70449f;
+    font-size: 19px;
+}
+
+.date {
+    color: #d58c9b;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 8px 0 15px;
+}
+
+.experience-card p,
+.experience-card li {
+    font-size: 13px;
+    color: #71677b;
+    line-height: 2;
+}
+
+.experience-card ul {
+    padding-left: 20px;
+}
+
+/* CERTIFICATIONS */
+
+.certifications {
+    background: #fff9ee;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.cert {
+    background: white;
+    border-radius: 17px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 25px rgba(70,40,80,0.06);
+}
+
+.cert .emoji {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.cert h3 {
+    color: #8456b0;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.cert p {
+    color: #91859a;
+    font-size: 12px;
+}
+
+/* VOLUNTEERING */
+
+.volunteer {
+    background: white;
+    text-align: center;
+}
+
+.volunteer-box {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background: #eaf7ed;
+    border-radius: 20px;
+    color: #527c60;
+}
+
+.volunteer-box h3 {
+    margin-bottom: 12px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: linear-gradient(120deg, #e9d9ff, #ffe5e7);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: #49345e;
+}
+
+.contact p {
+    color: #72637d;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-links a {
+    background: white;
+    color: #8054ad;
+    padding: 13px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.contact-links a:hover {
+    background: #9660cf;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    background: #302b40;
+    color: white;
+    padding: 22px;
+    font-size: 12px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media(max-width: 750px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 7%;
+    }
+
+    .hero-art {
+        width: 190px;
+        height: 190px;
+        font-size: 65px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="logo">Manasa.</div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="hello">HELLO, WELCOME TO MY PORTFOLIO!</div>
+
+        <h1>I'm <span>Manasa</span><br>Rajasekharan.</h1>
+
+        <h3>Statistics & Data Science Student</h3>
+
+        <p>
+            Passionate about statistics, data, market research
+            and discovering insights that drive meaningful
+            decisions. Always curious, learning and exploring
+            new opportunities.
+        </p>
+
+        <div class="buttons">
+            <a href="#contact" class="btn primary">Get in Touch ↗</a>
+            <a href="#experience" class="btn secondary">Explore My Work</a>
+        </div>
+
+    </div>
+
+    <div class="hero-art">✿</div>
+
+</header>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="section-heading">
+        <h2>About Me ✨</h2>
+        <p>A little introduction</p>
+    </div>
+
+    <div class="about-card">
+        I am a Statistics and Data Science student at CHRIST
+        University, Bengaluru. I enjoy working with numbers,
+        understanding patterns and exploring how data can
+        help businesses make better decisions.
+
+        <br><br>
+
+        My interests include statistical analysis, market
+        research, data visualization and business development.
+        I am always eager to learn, take on challenges and
+        gain practical experience through real-world projects.
+    </div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section class="education" id="education">
+
+    <div class="section-heading">
+        <h2>Education 🎓</h2>
+        <p>My academic journey</p>
+    </div>
+
+    <div class="info-card">
+        <h3>Bachelor of Science in Statistics and Data Science</h3>
+
+        <p>
+            <strong>CHRIST University, Bengaluru</strong><br>
+            3rd Semester<br><br>
+
+            <strong>Relevant Coursework:</strong><br>
+            Descriptive Statistics, Principles of Data Science,
+            Digital Computer Fundamentals, Python Programming,
+            Computational Statistics and UNIX OS.
+            <br><br>
+
+            <strong>Semester I GPA:</strong> 3.8 / 4<br>
+            <strong>Semester II GPA:</strong> 3.7 / 4
+        </p>
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section class="skills" id="skills">
+
+    <div class="section-heading">
+        <h2>My Skills 💡</h2>
+        <p>Things I have learned and worked with</p>
+    </div>
+
+    <div class="skill-group">
+        <h3>Technical Skills</h3>
+
+        <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">R Programming</span>
+            <span class="tag">Microsoft Excel</span>
+            <span class="tag">Statistical Analysis</span>
+            <span class="tag">UNIX OS</span>
+            <span class="tag">MS Office</span>
+            <span class="tag">Market Research</span>
+            <span class="tag">B2B Sales</span>
+            <span class="tag">Lead Generation</span>
+        </div>
+    </div>
+
+    <div class="skill-group">
+        <h3>Soft Skills</h3>
+
+        <div class="tags">
+            <span class="tag">Communication</span>
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Adaptability</span>
+            <span class="tag">Time Management</span>
+            <span class="tag">Teamwork</span>
+        </div>
+    </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section class="experience" id="experience">
+
+    <div class="section-heading">
+        <h2>Experience 💼</h2>
+        <p>Learning through practical experience</p>
+    </div>
+
+    <div class="experience-card">
+
+        <h3>Sales Intern | Cavirk Private Limited – Zorio</h3>
+
+        <div class="date">JULY 2026 – PRESENT</div>
+
+        <ul>
+            <li>Researched potential clients and built lead lists
+                across different industries.</li>
+
+            <li>Connected with prospects through calls, emails
+                and LinkedIn to introduce Zorio and schedule
+                product demos.</li>
+
+            <li>Maintained lead records and followed up with
+                prospects throughout the sales process.</li>
+        </ul>
+
+    </div>
+
+    <div class="experience-card">
+
+        <h3>Market Research and Social Media Intern – CICF</h3>
+
+        <p>Echo Friendly Acoustics Startup Project</p>
+
+        <div class="date">FEBRUARY 2026 – APRIL 2026 | 3 MONTHS</div>
+
+        <ul>
+            <li>Conducted market research to identify industry
+                trends, customer preferences and competitor insights.</li>
+
+            <li>Collected, organized and analyzed data to support
+                business decision-making.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section class="certifications">
+
+    <div class="section-heading">
+        <h2>Certifications 🏅</h2>
+        <p>Learning beyond the classroom</p>
+    </div>
+
+    <div class="cert-grid">
+
+        <div class="cert">
+            <div class="emoji">📊</div>
+            <h3>Data Science and AI</h3>
+            <p>Certification Course – IIT Madras, 2024</p>
+        </div>
+
+        <div class="cert">
+            <div class="emoji">⛑️</div>
+            <h3>First Aid Training</h3>
+            <p>St. John's Medical College, 2025</p>
+        </div>
+
+        <div class="cert">
+            <div class="emoji">🌱</div>
+            <h3>Service Learning</h3>
+            <p>Vonisha Service Foundation, 2025</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VOLUNTEERING -->
+
+<section class="volunteer">
+
+    <div class="section-heading">
+        <h2>Giving Back 💚</h2>
+        <p>Making a difference beyond academics</p>
+    </div>
+
+    <div class="volunteer-box">
+        <h3>Volunteer – Vonisha Service Foundation</h3>
+
+        <p>
+            November 2025<br><br>
+            Conducted baseline assessment and assisted
+            in data collection as part of volunteering work.
+        </p>
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2>Let's Connect! 💌</h2>
+
+    <p>
+        Interested in opportunities, collaborations or
+        simply having a conversation? Feel free to reach out!
+    </p>
+
+    <div class="contact-links">
+
+        <a href="mailto:memanasa1224@gmail.com">✉ Email Me</a>
+
+        <a href="tel:+917845440401">☎ Call Me</a>
+
+        <a href="https://www.linkedin.com/in/manasa-rajasekaran-34850735a/"
+           target="_blank">in LinkedIn</a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Manasa Rajasekharan | Designed with creativity ♡
+</footer>
+
+</body>
+</html>
